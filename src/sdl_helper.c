@@ -42,7 +42,11 @@ void SDLH_LimitFps()
 		}
 }
 
-void SDLH_Flush()
+void SDLH_DrawStart()
+{
+	SDL_FillRect(surface, NULL, 0x000000);
+}
+void SDLH_DrawEnd()
 {
 	SDL_Flip(surface);
 }

@@ -31,6 +31,7 @@ void GameLoop()
 int randomNumForFun=0;
 void AnimateStuff()
 {
+	SDLH_DrawStart();
 	int x,y;
 	for (x=0; x<SCREEN_WIDTH; x++)
 	{
@@ -40,7 +41,7 @@ void AnimateStuff()
 	    }
 	}
 	if (++randomNumForFun==255) randomNumForFun=0;
-	SDLH_Flush();
+	SDLH_DrawEnd();
 }
 
 int HandleInput()

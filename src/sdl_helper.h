@@ -10,7 +10,10 @@ void SDLH_QuitSDL();
 
 //FPS limiter
 void SDLH_LimitFps();
-void SDLH_Flush();
+
+//Draw
+void SDLH_DrawStart();
+void SDLH_DrawEnd();
 
 //Pixel
 void SDLH_DrawPixel(int x, int y, Uint8 r, Uint8 g, Uint8 b);
