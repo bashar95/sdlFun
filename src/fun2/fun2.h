@@ -1,6 +1,6 @@
 #include "SDL/SDL.h"
-#include "safwat_math.h"
-#include "sdl_helper.h"
+#include "../math.h"
+#include "../sdl_helper.h"
 #include <time.h>
 
 double random_function(double random);

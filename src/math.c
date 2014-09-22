@@ -1,4 +1,4 @@
-#include "safwat_math.h"
+#include "math.h"
 #include <stdio.h>
 double pi=3.1415926535897;
 double tau=2*3.1415926535897;
