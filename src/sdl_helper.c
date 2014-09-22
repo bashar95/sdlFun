@@ -1,5 +1,55 @@
 #include "sdl_helper.h"
-void draw_pixel(SDL_Surface * surface, int x, int y, Uint8 r, Uint8 g, Uint8 b)
+
+SDL_Surface * surface;
+Uint32 sdlh_current_time;
+Uint32 sdlh_previous=0;
+
+int sdlh_screen_width;
+int sdlh_screen_height;
+int sdlh_max_fps;
+#define SCREEN_DEPTH 24
+	
+int sdlh_ms_per_frame;
+void SDLH_StartSDL(int w,int h,int fps,const char * title)
+{
+	sdlh_screen_width=w;
+	sdlh_screen_height=h;
+	sdlh_max_fps=fps;
+	sdlh_ms_per_frame=1000/sdlh_max_fps;
+	
+    SDL_Init(SDL_INIT_VIDEO);
+    sdlh_current_time=SDL_GetTicks();
+    sdlh_previous=0;
+    surface = SDL_SetVideoMode(sdlh_screen_width, sdlh_screen_height, SCREEN_DEPTH, SDL_SWSURFACE /*| SDL_FULLSCREEN*/ );
+    SDL_WM_SetCaption(title, title);
+}
+
+void SDLH_QuitSDL()
+{
+	SDL_Quit();
+}
+
+void SDLH_LimitFps()
+{
+		int sleep_needed;
+		sdlh_previous=sdlh_current_time;
+		sdlh_current_time=SDL_GetTicks();
+		sleep_needed=sdlh_ms_per_frame-(sdlh_current_time-sdlh_previous);
+		if (sleep_needed>0)
+		{
+			usleep(sleep_needed * 1000);
+			sdlh_current_time=SDL_GetTicks();
+		}
+}
+
+void SDLH_Flush()
+{
+	SDL_Flip(surface);
+}
+
+
+
+void SDLH_DrawPixel(int x, int y, Uint8 r, Uint8 g, Uint8 b)
 {
     Uint8 * pixel = (Uint8*)surface->pixels;
     pixel += (y * surface->pitch) + (x * (sizeof(Uint8) * 3));
@@ -7,7 +57,12 @@ void draw_pixel(SDL_Surface * surface, int x, int y, Uint8 r, Uint8 g, Uint8 b)
     pixel[1] = g;
     pixel[0] = b;
 }
-sdl_image load_img(const char * path)
+
+
+
+
+
+sdl_image SDLH_LoadImage(const char * path)
 {
     sdl_image img;
     SDL_Surface *temp;
@@ -25,7 +80,13 @@ sdl_image load_img(const char * path)
 
     return img;
 }
-void draw_image(SDL_Surface *surface, SDL_Surface *  image,int x,int y)
+
+
+
+
+
+
+void SDLH_DrawImage(sdl_image image,int x,int y)
 {
     SDL_Rect src, dest;
     src.x = 0;

@@ -1,7 +1,22 @@
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
+#include <math.h>
+#include <time.h>
 typedef SDL_Surface * sdl_image;
-void draw_pixel(SDL_Surface * surface, int x, int y, Uint8 r, Uint8 g, Uint8 b);
-sdl_image load_img(const char * path);
-void  draw_image(SDL_Surface *surface, sdl_image image,int x,int y);
+
+//Init
+void SDLH_StartSDL(int w,int h,int fps,const char * title);
+void SDLH_QuitSDL();
+
+//FPS limiter
+void SDLH_LimitFps();
+void SDLH_Flush();
+
+//Pixel
+void SDLH_DrawPixel(int x, int y, Uint8 r, Uint8 g, Uint8 b);
+
+
+//Image
+sdl_image SDLH_LoadImage(const char * path);
+void SDLH_DrawImage(sdl_image image,int x,int y);
 
