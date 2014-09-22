@@ -44,10 +44,12 @@ void SDLH_LimitFps()
 
 void SDLH_DrawStart()
 {
+	SDL_LockSurface(surface);
 	SDL_FillRect(surface, NULL, 0x000000);
 }
 void SDLH_DrawEnd()
 {
+	SDL_UnlockSurface(surface);
 	SDL_Flip(surface);
 }
 
