@@ -1,0 +1,66 @@
+Configure upstream (original repo) for syncing:
+git remote -v
+git remote add upstream https://github.com/octocat/Spoon-Knife
+git remote -v
+
+
+Sync your repo with upstream repo:
+cd /home/cyber/Adblock/EasyListHebrew/
+git fetch upstream
+git checkout master
+git merge upstream/master
+git push origin master
+
+
+
+change remote url:
+git remote set-url origin git@github.com:wiseoldman95/EasyListHebrew.git
+git remote set-url upstream git@github.com:wiseoldman95/EasyListHebrew.git
+
+
+Incomplete guides:
+
+Cloning a remote:
+git clone URL
+
+
+Create a local branch:
+git checkout -b <branch>  #Copies the current branch, make sure it's master first (git checkout master)
+
+Switch to a branch: (Modifies the files to reflect that branch)
+git checkout master
+
+Merge a branch: (Delete and delete remotely after merging)
+git merge <branch> -m "message" will merge with the current branch!
+
+Delete a branch:
+git branch -d <branch> 
+
+Delete a branch remotely (usually one should do both this and the above):
+git push origin --delete <branch> 
+
+Update git branch locally (note the branch you're in):
+git add * (after doing changes to the files)
+git rm file_to_be_removed_from_branch
+git commit -m "Commit message"
+
+Send a local branch to your remote repo:
+git push origin master OR <branch>
+
+Sync your remote repo with upstream (Pull request):
+Pull requests can only be done via Github, I think
+
+Get a remote branch:
+git checkout --track origin/<branch>
+
+Syncing local with remote:
+I don't know exactly
+"...In order to support this model git maintains a local repository with your code and also an additional local repository that mirrors the state of the remote repository. By keeping a copy of the remote repository locally, git can figure out the changes needed even when the remote repository is not reachable. Later when you need to send the changes to someone else, git can transfer them as a set of changes from a point in time known to the remote repository.
+
+    git fetch is the command that says "bring my local copy of the remote repository up to date."
+
+    git pull says "bring the changes in the remote repository where I keep my own code."
+"
+
+In the simplest terms, git pull does a git fetch followed by a git merge.
+"git branch -a" shows you the "local-remote" branches and the local branches.
