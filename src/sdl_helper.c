@@ -45,8 +45,13 @@ void SDLH_LimitFps()
 void SDLH_DrawStart()
 {
 	SDL_LockSurface(surface);
+}
+
+void SDLH_ClearScreen()
+{
 	SDL_FillRect(surface, NULL, 0x000000);
 }
+
 void SDLH_DrawEnd()
 {
 	SDL_UnlockSurface(surface);

@@ -13,6 +13,7 @@ void SDLH_LimitFps();
 
 //Draw
 void SDLH_DrawStart();
+void SDLH_ClearScreen();
 void SDLH_DrawEnd();
 
 //Pixel

@@ -29,18 +29,21 @@ void GameLoop()
 }
 
 int randomNumForFun=0;
+int deltaNumForFun=1;
 void AnimateStuff()
 {
 	SDLH_DrawStart();
+	SDLH_ClearScreen(); //Something interesting will happen if you comment this ;)
 	int x,y;
-	for (x=0; x<SCREEN_WIDTH; x++)
+	for (x=randomNumForFun; x<SCREEN_WIDTH; x++)
 	{
 	    for (y=0; y<SCREEN_HEIGHT; y++)
 	    {
 		SDLH_DrawPixel(x,y,x%255,y%255,(x+y+randomNumForFun)%255);
 	    }
 	}
-	if (++randomNumForFun==255) randomNumForFun=0;
+	if (randomNumForFun>=SCREEN_WIDTH || randomNumForFun<0) deltaNumForFun*=-1;
+	randomNumForFun+=deltaNumForFun;
 	SDLH_DrawEnd();
 }
 
@@ -58,6 +61,7 @@ int HandleInput()
 			
 			//case SDL_MOUSEMOTION:
 			//case SDL_MOUSEBUTTONDOWN:
+				//event.button.x , event.button.y
 			//case SDL_KEYUP
 			case SDL_KEYDOWN:
 				//if (event.key.keysym.sym==SDLK_LEFT) blahblah
