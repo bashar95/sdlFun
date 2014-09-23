@@ -64,3 +64,12 @@ I don't know exactly
 
 In the simplest terms, git pull does a git fetch followed by a git merge.
 "git branch -a" shows you the "local-remote" branches and the local branches.
+
+
+Keep Your files even in merge:
+nano .gitattributes
+src/minimal.c merge=ours
+git config --global merge.ours.driver true
+git rm src/a.out
+git checkout master
+git merge upstream/master
