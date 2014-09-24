@@ -45,6 +45,7 @@ I don't have ready-to-use instructions, sorry. SDL is cross platform, therefore 
 
 Linux Debian/Ubuntu/Mint:
 ======
+
 ```
 #Get all the needed dependencies
 apt-get install gcc git libsdl-image1.2-dev libsdl-dev
