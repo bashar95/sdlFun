@@ -1,5 +1,5 @@
 //apt-get install libsdl-image1.2-dev libsdl-dev
-#include "sdl_helper.h"
+#include "sdlfun.h"
 #define SCREEN_WIDTH 600
 #define SCREEN_HEIGHT 600
 #define MAX_FPS 30
