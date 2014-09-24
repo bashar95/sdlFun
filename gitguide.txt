@@ -53,3 +53,12 @@ git config --global merge-.ours.driver true #only needed once
 git rm src/a.out
 git checkout master
 git merge upstream/master
+
+Reseting a branch:
+In this case, making master equal with upstream again
+
+Word of caution: Do not ever do this when you have a lot of people following your repository, you will make their local repository go out of sync if they have pulled in the latest changes. 
+Word of caution 2: The commit can still be accessible directly via SHA1. Force push does not delete the commit, it creates a new one and moves the file pointer to it. 
+
+git checkout -B master upstream/master #Make upstream/master "overwrite" master
+git push origin +master #Force a "bad" push.
