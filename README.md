@@ -65,8 +65,9 @@ make
 #Run it:
 /.sdlfun.out
 
-#Feel free to play around with minimal.c and then execute `make` again.
-#Have fun!
+#Feel free to fork and play around.
+#To avoid merge conflicts, it's best that you only modify /sandbox
+#When experimenting.
 ```
 
 To-do list
