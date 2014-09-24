@@ -51,10 +51,13 @@ apt-get install gcc git libsdl-image1.2-dev libsdl-dev
 #Get sdlFun
 git clone https://github.com/wiseoldman95/sdlFun.git 
 
-#You're finished! Now you can play around with minimal.c
-#When you want to check the result, run the compile script:
+#You're finished! To test if it's working:
 cd <YourSdlFun directory>/src
 ./compileAndRun.sh
+
+#This will run the demo found at `minimal.c`
+#Feel free to play around with minimal.c and then execute `compileAndRun.sh` again.
+#Have fun!
 ```
 
 Todo list
