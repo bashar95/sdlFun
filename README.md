@@ -56,11 +56,11 @@ apt-get install gcc git libsdl-image1.2-dev libsdl-dev
 git clone https://github.com/wiseoldman95/sdlFun.git 
 
 #Compile the demo:
-cd <YourSdlFun directory>/<c or cpp>
+cd sdlFun/c OR cd sdlFun/cpp 
 make
-#If all works will, you should get a new file `sdlfun.out`
+#If all works well, you should get a new file `sdlfun.out`
 
-#Run the demo:
+#Run it:
 /.sdlfun.out
 
 #Feel free to play around with minimal.c and then execute `make` again.
@@ -69,7 +69,6 @@ make
 
 To-do list
 ======
-* Port to c++
 * Function to unload images
 * Test the Debian instructions on Ubuntu, Mint, etc.
 
