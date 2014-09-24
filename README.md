@@ -68,8 +68,4 @@ To-do list
 * Function to unload images
 * Test the Debian instructions on Ubuntu, Mint, etc.
 
-License
-======
-sdlFun is licensed under GPLv2. Please see the LICENSE file.
-
 
