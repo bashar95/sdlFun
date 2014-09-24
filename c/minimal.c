@@ -33,7 +33,7 @@ int deltaNumForFun=1;
 void AnimateStuff()
 {
 	SDLH_DrawStart();
-	SDLH_ClearScreen(); //Something interesting will happen if you comment this ;)
+	//SDLH_ClearScreen(); //Something interesting will happen if you comment this ;)
 	int x,y;
 	for (x=randomNumForFun; x<SCREEN_WIDTH; x++)
 	{
