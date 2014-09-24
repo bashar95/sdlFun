@@ -1,7 +1,6 @@
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
-#include <math.h>
-#include <time.h>
+#include <unistd.h>
 typedef SDL_Surface * sdl_image;
 
 //Init
