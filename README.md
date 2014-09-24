@@ -10,6 +10,7 @@ Features
 * Draw images on screen (.bmp , .png) 
 * FPS limiter
 
+Also see the to-do list below.
 
 Minimalist Demo
 ======
