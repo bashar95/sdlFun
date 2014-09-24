@@ -47,7 +47,6 @@ Pull requests can only be done via Github, I think
 Get a remote branch:
 git checkout --track origin/<branch>
 
-
 priorty over your own files in merge:
 nano .gitattributes
 src/minimal.c merge=ours
