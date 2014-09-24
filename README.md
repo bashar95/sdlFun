@@ -2,7 +2,7 @@ sdlFun
 ======
 In a sentence: sdlFun is an extremely simple way to draw 2d pixels / images on the screen.
 
-SDL is a cross-platform graphics library. This repository contains an extremely minimal SDL wrapper written in C/C++, which makes 2d screen drawing as easy as it could get. It is not intended for making anything fancy. sdlFun is suitable for games with basic graphics requirements such as pixel art games. It is also a great tool for learning 2d graphics.
+SDL is a cross-platform graphics library. This repository contains an extremely minimal SDL wrapper written in both C andC++, which makes 2d screen drawing as easy as it could get. It is not intended for making anything fancy. sdlFun is suitable for games with basic graphics requirements such as pixel art games. It is also a great tool for learning 2d graphics.
 
 Features
 ======
