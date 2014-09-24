@@ -1,5 +1,7 @@
 sdlFun
 ======
+In a sentence: sdlFun is an extremely simple library for drawing 2d pixels / images on the screen.
+
 SDL is a cross-platform graphics library. This repository contains an extremely minimal SDL wrapper written in C, which makes 2d screen drawing as easy as it could get. It is not intended for making anything fancy. sdlFun is suitable for games with basic graphics requirements such as pixel art games. It is also a great tool for learning 2d graphics.
 
 Features
@@ -11,27 +13,37 @@ Features
 
 Minimalist Demo
 ======
+Here is a basic demo. A more advanced demo can be found at `minimal.c`.
+
 ```
 #include "sdl_helper.h"
-int main(int argc, char *argv[])
+int main()
 {
-SDLH_StartSDL(300,300,30,"HEllo pixel"); //Width, Height, MaxFPS, message
-SDLH_DrawStart();
-SDLH_ClearScreen();
+	SDLH_StartSDL(300,300,30,"HEllo pixel"); //Width, Height, MaxFPS, message
+	SDLH_DrawStart();
+	SDLH_ClearScreen();
 
-SDLH_DrawPixel(5,5,255,0,0); //X, Y, Red, Green, Blue. Draws a red pixel.
+	SDLH_DrawPixel(5,5,255,0,0); //X, Y, Red, Green, Blue. Draws a red pixel.
 
-sdl_image coolimage = SDLH_LoadImage("myCoolImage.png");  //Loads image from disk
-SDLH_DrawImage(coolimage, 20, 20); //Draws the loaded image on screen
+	sdl_image coolimage = SDLH_LoadImage("myCoolImage.png");  //Loads image from disk
+	SDLH_DrawImage(coolimage, 20, 20); //Draws the loaded image on screen
 
-SDLH_DrawEnd();
-SDLH_QuitSDL();
-return 0;
+	SDLH_DrawEnd();
+	SDLH_QuitSDL();
+	return 0;
 }
 
-Getting sdlFun
+Getting and using sdlFun
 ======
-sdlFun has some dependencies. The following example will show you how to use sdlFun with Linux Debian/Ubuntu/Mint:
+sdlFun depends on some libraries. The following sections explain how to install and use sdlFun.
+
+Windows
+======
+Something here soon.
+I don't have ready-to-use instructions, sorry. SDL is cross platform, therefore sdlFun will work fine on Windows once the dependencies are installed. The dependencies are: `sdl-image` , `sdl`.
+
+Linux Debian/Ubuntu/Mint:
+======
 ```
 #Get all the needed dependencies
 apt-get install gcc git libsdl-image1.2-dev libsdl-dev
