@@ -1,4 +1,57 @@
 sdlFun
 ======
+SDL is a cross-platform graphics library. This repository contains an extremely minimal SDL wrapper written in C, which makes 2d screen drawing as easy as it could get. It is not intended for making anything fancy. sdlFun is suitable for games with basic graphics requirements such as pixel art games. It is also a great tool for learning 2d graphics.
 
-Testing Some SDL fun, learning GIT
+Features
+======
+* Draw pixels directly on screen.
+* Draw images on screen (.bmp , .png) 
+* FPS limiter
+
+
+Minimalist Demo
+======
+```
+#include "sdl_helper.h"
+int main(int argc, char *argv[])
+{
+SDLH_StartSDL(300,300,30,"HEllo pixel"); //Width, Height, MaxFPS, message
+SDLH_DrawStart();
+SDLH_ClearScreen();
+
+SDLH_DrawPixel(5,5,255,0,0); //X, Y, Red, Green, Blue. Draws a red pixel.
+
+sdl_image coolimage = SDLH_LoadImage("myCoolImage.png");  //Loads image from disk
+SDLH_DrawImage(coolimage, 20, 20); //Draws the loaded image on screen
+
+SDLH_DrawEnd();
+SDLH_QuitSDL();
+return 0;
+}
+
+Getting sdlFun
+======
+sdlFun has some dependencies. The following example will show you how to use sdlFun with Linux Debian/Ubuntu/Mint:
+```
+#Get all the needed dependencies
+apt-get install gcc git libsdl-image1.2-dev libsdl-dev
+
+#Get sdlFun
+git clone https://github.com/wiseoldman95/sdlFun.git 
+
+#You're finished! Now you can play around with minimal.c
+#When you want to check the result, run the compile script:
+cd <YourSdlFun directory>/src
+./compileAndRun.sh
+```
+
+Todo list
+======
+* Port to c++
+* Function to unload images
+
+License
+======
+sdlFun is used under GPLv2. Please see the LICENSE file.
+
+
