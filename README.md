@@ -20,11 +20,13 @@ Here is a basic demo. A more advanced demo can be found at `minimal.c`.
 #include "sdl_helper.h"
 int main()
 {
-	SDLH_StartSDL(300,300,30,"HEllo pixel"); //(Width, Height, Max FPS, Window Title) - prepares SDL and SDLhelper.
+	SDLH_StartSDL(300,300,30,"HEllo pixel"); //(Width, Height, Max FPS, Window Title)
+
 	SDLH_DrawStart(); //Only call drawing stuff between DrawStart and DrawEnd
 	SDLH_ClearScreen(); //Clear the screen (Paint it black).
 
-	SDLH_DrawPixel(5,5,255,0,0); //(X, Y, Red, Green, Blue) - This simply draws a red pixel.
+	//This simply draws a red pixel.
+	SDLH_DrawPixel(5,5,255,0,0); //(X, Y, Red, Green, Blue)
 
 	sdl_image coolimage = SDLH_LoadImage("myCoolImage.png");  //Loads image from disk
 	SDLH_DrawImage(coolimage, 20, 20); //Draws the loaded image on screen
