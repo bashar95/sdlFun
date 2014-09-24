@@ -20,11 +20,11 @@ Here is a basic demo. A more advanced demo can be found at `minimal.c`.
 #include "sdl_helper.h"
 int main()
 {
-	SDLH_StartSDL(300,300,30,"HEllo pixel"); //Width, Height, MaxFPS, message
-	SDLH_DrawStart();
-	SDLH_ClearScreen();
+	SDLH_StartSDL(300,300,30,"HEllo pixel"); //(Width, Height, Max FPS, Window Title) - prepares SDL and SDLhelper.
+	SDLH_DrawStart(); //Only call drawing stuff between DrawStart and DrawEnd
+	SDLH_ClearScreen(); //Clear the screen (Paint it black).
 
-	SDLH_DrawPixel(5,5,255,0,0); //X, Y, Red, Green, Blue. Draws a red pixel.
+	SDLH_DrawPixel(5,5,255,0,0); //(X, Y, Red, Green, Blue) - This simply draws a red pixel.
 
 	sdl_image coolimage = SDLH_LoadImage("myCoolImage.png");  //Loads image from disk
 	SDLH_DrawImage(coolimage, 20, 20); //Draws the loaded image on screen
@@ -44,7 +44,7 @@ Windows
 Something here soon.
 I don't have ready-to-use instructions, sorry. SDL is cross platform, therefore sdlFun will work fine on Windows once the dependencies are installed. The dependencies are: `sdl-image` , `sdl`.
 
-Linux Debian/Ubuntu/Mint:
+GNU/Linux Debian:
 ======
 ```
 #Get all the needed dependencies
@@ -66,6 +66,7 @@ To-do list
 ======
 * Port to c++
 * Function to unload images
+* Test the Debian instructions on Ubuntu, Mint, etc.
 
 License
 ======
