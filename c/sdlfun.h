@@ -1,3 +1,6 @@
+#ifndef SDLFUN_H
+#define SDLFUN_H
+
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 #include <unistd.h>
@@ -23,3 +26,4 @@ void SDLH_DrawPixel(int x, int y, Uint8 r, Uint8 g, Uint8 b);
 sdl_image SDLH_LoadImage(const char * path);
 void SDLH_DrawImage(sdl_image image,int x,int y);
 
+#endif /* SDLFUN_H */
