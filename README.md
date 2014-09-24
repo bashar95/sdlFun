@@ -70,6 +70,6 @@ To-do list
 
 License
 ======
-sdlFun is used under GPLv2. Please see the LICENSE file.
+sdlFun is licensed under GPLv2. Please see the LICENSE file.
 
 
