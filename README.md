@@ -70,6 +70,7 @@ make
 To-do list
 ======
 * Function to unload images
+* Delta timing
 * Test the Debian instructions on Ubuntu, Mint, etc.
 
 
