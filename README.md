@@ -14,7 +14,7 @@ Also see the to-do list below.
 
 Minimalist Demo
 ======
-Here is a basic demo. A more advanced demo can be found at `minimal.c`.
+Here is a basic demo. A more advanced demo can be found at `c/minimal.c` or `cpp/minimal.cpp`.
 
 ```
 #include "sdl_helper.h"
