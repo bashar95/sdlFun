@@ -26,7 +26,7 @@ int main()
 	SDLH_ClearScreen(); //Clear the screen (Paint it black).
 
 	//This simply draws a red pixel.
-	SDLH_DrawPixel(5,5,255,0,0); //(X, Y, Red, Green, Blue)
+	SDLH_DrawPixel(5, 5, 255, 0, 0); //(X, Y, Red, Green, Blue)
 
 	sdl_image coolimage = SDLH_LoadImage("myCoolImage.png");  //Loads image from disk
 	SDLH_DrawImage(coolimage, 20, 20); //Draws the loaded image on screen
